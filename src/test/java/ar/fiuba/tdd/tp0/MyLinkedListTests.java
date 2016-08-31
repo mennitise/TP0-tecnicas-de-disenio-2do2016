@@ -3,26 +3,25 @@ package ar.fiuba.tdd.tp0;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
 
-public class LinkedListTests {
+public class MyLinkedListTests {
 
     @Test
     public void linkedListNewIsEmpty()
     {
-        assertTrue((new LinkedList<String>().isEmpty()));
+        assertTrue((new MyLinkedList<String>().isEmpty()));
     }
 
     @Test
     public void linkedListNewHaveZeroElements()
     {
-        assertEquals((new LinkedList<String>().size()),0);
+        assertEquals((new MyLinkedList<String>().size()),0);
     }
 
-    private LinkedList<String> setListOneItem()
+    private MyLinkedList<String> setListOneItem()
     {
-        LinkedList<String> list = new LinkedList<>();
+        MyLinkedList<String> list = new MyLinkedList<>();
         String s = "hola mundo";
         list.addFirst(s);
         return list;
@@ -31,14 +30,14 @@ public class LinkedListTests {
     @Test
     public void linkedListAddElementOneElement()
     {
-        LinkedList<String> list = this.setListOneItem();
+        MyLinkedList<String> list = this.setListOneItem();
         assertEquals(list.size(),1);
     }
 
     @Test
     public void linkedListAddElementSameElement()
     {
-        LinkedList<String> list = this.setListOneItem();
+        MyLinkedList<String> list = this.setListOneItem();
         assertEquals(list.getFirst(),"hola mundo");
     }
 }

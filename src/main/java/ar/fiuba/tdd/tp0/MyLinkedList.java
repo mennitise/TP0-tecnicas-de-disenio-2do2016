@@ -1,6 +1,6 @@
 package ar.fiuba.tdd.tp0;
 
-public class LinkedList<T>
+class MyLinkedList<T>
 {
     private int sizeList;
     private Node<T> first;
@@ -15,34 +15,34 @@ public class LinkedList<T>
         }
     }
 
-    public LinkedList()
+    MyLinkedList()
     {
         this.first = null;
         this.sizeList = 0;
     }
 
-    public boolean isEmpty()
+    boolean isEmpty()
     {
         return this.sizeList==0;
     }
 
-    public int size()
+    int size()
     {
         return this.sizeList;
     }
 
-    public void addFirst(T item)
+    void addFirst(T item)
     {
         this.first = new Node<>(item, this.first);
         this.sizeList++;
     }
 
-    public T getFirst()
+    T getFirst()
     {
         return this.first.item;
     }
 
-    public void removeFirst()
+    void removeFirst()
     {
         this.first = this.first.next;
         this.sizeList--;
