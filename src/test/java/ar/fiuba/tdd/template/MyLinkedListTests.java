@@ -35,4 +35,26 @@ public class MyLinkedListTests {
         MyLinkedList<String> list = this.setListOneItem();
         assertEquals(list.getFirst(),"hola mundo");
     }
+
+    @Test
+    public void linkedListEmptyThrowsErrorAtGetFirst() {
+        MyLinkedList<String> list = new MyLinkedList<>();
+        try {
+            list.getFirst();
+            assert false;
+        } catch (AssertionError e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void linkedListEmptyThrowsErrorAtRemoveFirst() {
+        MyLinkedList<String> list = new MyLinkedList<>();
+        try {
+            list.removeFirst();
+            assert false;
+        } catch (AssertionError e) {
+            assert true;
+        }
+    }
 }

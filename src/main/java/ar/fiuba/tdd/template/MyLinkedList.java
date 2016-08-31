@@ -32,11 +32,17 @@ class MyLinkedList<T> {
         this.sizeList++;
     }
 
-    T getFirst() {
+    T getFirst() throws AssertionError {
+        if ( this.first == null) {
+            throw new AssertionError();
+        }
         return this.first.item;
     }
 
-    void removeFirst() {
+    void removeFirst() throws AssertionError {
+        if ( this.first == null ) {
+            throw new AssertionError();
+        }
         this.first = this.first.next;
         this.sizeList--;
     }

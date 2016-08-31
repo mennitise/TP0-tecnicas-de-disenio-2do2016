@@ -42,4 +42,26 @@ public class MyQueueTests {
         queue.remove();
         assertTrue(queue.isEmpty());
     }
+
+    @Test
+    public void queueEmptyThrowsAssertionErrorAtTop() {
+        MyQueue<String> queue = new MyQueue<>();
+        try {
+            queue.top();
+            assert false;
+        } catch (AssertionError e) {
+            assert true;
+        }
+    }
+
+    @Test
+    public void queueEmptyThrowsAssertionErrorAtRemove() {
+        MyQueue<String> queue = new MyQueue<>();
+        try {
+            queue.remove();
+            assert false;
+        } catch (AssertionError e) {
+            assert true;
+        }
+    }
 }

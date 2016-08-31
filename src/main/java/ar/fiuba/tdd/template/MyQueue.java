@@ -20,11 +20,11 @@ class MyQueue<T> {
         this.list.addFirst(item);
     } // agregar un item
 
-    T top() {
+    T top() throws AssertionError {
         return this.list.getFirst();
     } // retornar el primer item, lanzar exception si esta vacío.
 
-    void remove() {
+    void remove() throws AssertionError {
         this.list.removeFirst();
     } // remover el primer item lanzar exception si esta vacío.
 
