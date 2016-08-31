@@ -1,4 +1,4 @@
-package ar.fiuba.tdd.tp0;
+package ar.fiuba.tdd.template;
 
 import org.junit.Test;
 

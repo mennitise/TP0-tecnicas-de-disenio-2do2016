@@ -1,11 +1,10 @@
-package ar.fiuba.tdd.tp0;
+package ar.fiuba.tdd.template;
 
 class MyQueue<T> {
 
     private MyLinkedList<T> list;
 
-    MyQueue()
-    {
+    MyQueue() {
         this.list = new MyLinkedList<>();
     }
 
@@ -17,18 +16,15 @@ class MyQueue<T> {
         return this.list.size();
     }
 
-    void add(T item)
-    {
+    void add(T item) {
         this.list.addFirst(item);
     } // agregar un item
 
-    T top()
-    {
+    T top() {
         return this.list.getFirst();
     } // retornar el primer item, lanzar exception si esta vacío.
 
-    void remove()
-    {
+    void remove() {
         this.list.removeFirst();
     } // remover el primer item lanzar exception si esta vacío.
 
