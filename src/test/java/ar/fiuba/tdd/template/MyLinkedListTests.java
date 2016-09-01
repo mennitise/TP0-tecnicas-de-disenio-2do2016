@@ -19,7 +19,7 @@ public class MyLinkedListTests {
 
     private MyLinkedList<String> setListOneItem() {
         MyLinkedList<String> list = new MyLinkedList<>();
-        String words = "hola mundo";
+        String words = "hello world";
         list.addFirst(words);
         return list;
     }
@@ -33,7 +33,7 @@ public class MyLinkedListTests {
     @Test
     public void linkedListAddElementSameElement() {
         MyLinkedList<String> list = this.setListOneItem();
-        assertEquals(list.getFirst(),"hola mundo");
+        assertEquals(list.getFirst(),"hello world");
     }
 
     @Test
